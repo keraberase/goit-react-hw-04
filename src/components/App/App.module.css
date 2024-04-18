@@ -1,0 +1,14 @@
+#root{
+  margin: 0 auto;
+}
+.acontainer{
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  row-gap: 30px;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 100%;
+  height: 100px;
+}
