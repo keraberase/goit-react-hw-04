@@ -1,5 +1,5 @@
 // ImageModal.jsx
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import ReactModal from 'react-modal';
 import ImageCard from '../ImageCard/ImageCard';
 import css from './ImageModal.module.css';
