@@ -1,16 +1,25 @@
-import css from "./ImageCard.module.css";
+import css from './ImageCard.module.scss';
 
-const ImageCard = ({ picture }) => {
-  return (
-    <div className={css.imgCardContainer}>
-      <img
-        className={css.img}
-        src={picture.urls.small}
-        alt={picture.description}
-        id={picture.id}
-      />
-    </div>
-  );
-};
+const ImageCard = ({image: {urls, alt_description, likes, author}, onImgClick}) => {
+ 
+  function handleClick() {
 
-export default ImageCard;
+    const content = {
+      modal: urls.regular,
+      likes,
+      alt_description,
+      author,
+    };
+
+    onImgClick(content);
+  }
+  
+    return (
+      <div className={css["image-wrapper"]}>
+        <img className={css["image"]} src={urls.small} alt={alt_description} onClick={handleClick}/>
+      </div>
+ 
+    );
+  };
+  
+  export default ImageCard ;

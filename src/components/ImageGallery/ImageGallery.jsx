@@ -1,18 +1,22 @@
-import css from "./ImageGallery.module.css";
-import ImageModal from "../ImageModal/ImageModal.jsx";
+import css from './ImageGallery.module.scss';
+import ImageCard from "../ImageCard/ImageCard";
 
-const ImageGallery = ({ pictures }) => {
-  return (
-    <div className={css.galleryContainer}>
-      <ul className={css.galleryList}>
-        {pictures.map((picture, index) => (
-          <li key={index} className={css.galleryItem}>
-            <ImageModal picture={picture} />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
 
-export default ImageGallery;
+const ImageGallery = ({images, onImgClick}) => {
+    
+    return (
+        <ul className={css["image-gallery"]}>
+             {images.map((image, index) => {
+                return (
+                    <li key={`${image.id}-${index}`}>
+                        <ImageCard image={image} onImgClick={onImgClick}/>
+                    </li>
+                );
+            })}
+        </ul>
+
+    );
+    
+  }
+  
+  export default ImageGallery;
