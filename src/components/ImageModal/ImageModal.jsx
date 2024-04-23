@@ -1,11 +1,11 @@
-// ImageModal.jsx
-import  { useState } from 'react';
-import ReactModal from 'react-modal';
-import ImageCard from '../ImageCard/ImageCard';
-import css from './ImageModal.module.css';
+import  { useState } from "react";
+import ReactModal from "react-modal";
+import ImageCard from "../ImageCard/ImageCard";
+import css from "./ImageModal.module.css";
 
 const ImageModal = ({ picture }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); 
+
 
   const openModal = () => {
     setIsOpen(true);
@@ -28,7 +28,12 @@ const ImageModal = ({ picture }) => {
         className={css.imageModal}
         overlayClassName={css.modalOverlay}
       >
-        <img onClick={closeModal} src={picture.urls.regular} alt={picture.description} className={css.image} />
+        <img
+          onClick={closeModal}
+          src={picture.urls.regular}
+          alt={picture.description}
+          className={css.image}
+        />
       </ReactModal>
     </>
   );

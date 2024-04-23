@@ -1,4 +1,3 @@
-// ImageCard.jsx
 import css from "./ImageCard.module.css";
 
 const ImageCard = ({ picture }) => {
